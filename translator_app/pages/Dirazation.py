@@ -4,6 +4,23 @@ import tempfile
 import torch
 import librosa
 import numpy as np
+
+import torchaudio  # <-- add this
+
+# --- torchaudio / speechbrain compatibility patch ---
+# Some newer torchaudio builds on Windows/Python 3.12 don't expose list_audio_backends(),
+# but speechbrain expects it. We monkey-patch a minimal version.
+
+if not hasattr(torchaudio, "list_audio_backends"):
+    def _fake_list_audio_backends():
+        # We just pretend that at least one backend is available.
+        # speechbrain only checks that this list is non-empty.
+        return ["soundfile"]
+
+    torchaudio.list_audio_backends = _fake_list_audio_backends
+# --- end patch ---
+
+
 from speechbrain.pretrained import EncoderClassifier
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
