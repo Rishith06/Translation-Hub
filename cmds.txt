@@ -1,0 +1,24 @@
+py -3.10 -m venv venv
+
+
+venv\Scripts\activate
+streamlit run test.py
+streamlit run live-translator/live_translator_worker.py
+streamlit run live-translator/test.py
+streamlit run live-translator/translate.py
+streamlit run translator_app/home.py
+streamlit run translator_app/Home2.py
+streamlit run translator_app/pages/rehaan.py
+python translator_app/home2.py
+python translator_app/home3.py
+
+
+pip install streamlit vosk sounddevice argostranslate coqui-tts-
+pip install sounddevice
+
+Installations:
+
+
+
+
+[('sq', 'en'), ('ar', 'en'), ('az', 'en'), ('eu', 'en'), ('bn', 'en'), ('bg', 'en'), ('ca', 'en'), ('zt', 'en'), ('zh', 'en'), ('cs', 'en'), ('da', 'en'), ('nl', 'en'), ('en', 'sq'), ('en', 'ar'), ('en', 'az'), ('en', 'eu'), ('en', 'bn'), ('en', 'bg'), ('en', 'ca'), ('en', 'zh'), ('en', 'zt'), ('en', 'cs'), ('en', 'da'), ('en', 'nl'), ('en', 'eo'), ('en', 'et'), ('en', 'fi'), ('en', 'fr'), ('en', 'gl'), ('en', 'de'), ('en', 'el'), ('en', 'he'), ('en', 'hi'), ('en', 'hu'), ('en', 'id'), ('en', 'ga'), ('en', 'it'), ('en', 'ja'), ('en', 'ko'), ('en', 'ky'), ('en',n'), ('fa', 'en'), ('pl', 'en'), ('pb', 'en'), ('pt', 'en'), ('pt', 'es'), ('ro', 'en'), ('ru', 'en'), ('sk', 'en'), ('sl', 'en'), ('es', 'en'), ('es', 'pt'), ('sv', 'en'), ('tl', 'en'), ('th', 'en'), ('tr', 'en'), ('uk', 'en')]

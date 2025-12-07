@@ -1,0 +1,6 @@
+ffmpeg/
+generated/
+translator_app/utils/
+translator_app/vosk-model-en-in-0.5/
+Trash/
+venv/
